@@ -64,11 +64,10 @@ class PDO implements IntegrationInterface
      * Handle extracting the SQL query from the first argument
      *
      * @internal
-     * @param PDO $pdo The connectoin
      * @param string $query The SQL query to extract
      * @return array
      */
-    public static function handleQuery($pdo, $query)
+    public static function handleQuery($query)
     {
         return [
             'attributes' => ['query' => $query],
@@ -77,14 +76,13 @@ class PDO implements IntegrationInterface
     }
 
     /**
-     * Handle extracting the Data Source Name (DSN) from the constructor aruments to PDO
+     * Handle extracting the Data Source Name (DSN) from the constructor arguments to PDO
      *
      * @internal
-     * @param PDO $pdo
      * @param string $dsn The connection DSN
      * @return array
      */
-    public static function handleConnect($pdo, $dsn)
+    public static function handleConnect($dsn)
     {
         return [
             'attributes' => ['dsn' => $dsn],

@@ -28,10 +28,9 @@ class PDOTest extends TestCase
 {
     public function testHandleQuery()
     {
-        $scope = null;
         $query = 'select * from users';
 
-        $spanOptions = PDO::handleQuery($scope, $query);
+        $spanOptions = PDO::handleQuery($query);
         $expected = [
             'attributes' => [
                 'query' => 'select * from users'
@@ -45,7 +44,7 @@ class PDOTest extends TestCase
     public function testHandleConnect()
     {
         $dsn = 'mysql:host=localhost;dbname=testdb';
-        $spanOptions = PDO::handleConnect(null, $dsn);
+        $spanOptions = PDO::handleConnect($dsn);
         $expected = [
             'attributes' => [
                 'dsn' => 'mysql:host=localhost;dbname=testdb'
