@@ -27,7 +27,7 @@ accept your pull requests.
 
 In order to use OpenCensus for PHP, some setup is required!
 
-1. Install PHP. OpenCensus for PHP requires PHP 5.6 or higher. Installation of
+1. Install PHP. OpenCensus for PHP requires PHP 7.1 or higher. Installation of
    PHP varies depending on your system. Refer to the
    [PHP installation and configuration documentation](http://php.net/manual/en/install.php)
    for detailed instructions.
